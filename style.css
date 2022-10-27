@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+:root{
+    --fonte-principal: 'Josefin Sans', cursive;
+    --verde-escuro: #008037;
+    --verde-medio: #0FAD36;
+    --verde-claro: #73E157;
+    --bege-claro: #FFEDB6;
+    --azul: #007F84;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--fonte-principal);
+}
+
+/** ----------------ESTILO HEADER---------------- **/
+
+header{
+    background-image: radial-gradient( circle 341px at 50.1% 49.4%,  rgba(214,255,214,1) 52.2%, rgba(161,233,169,1) 100.2% );
+}
+
+.navbar{
+    display: grid;
+    grid-template-areas: 
+    'img opcoes opcoes opcoes sign';
+}
+
+.imgLogo{
+    grid-area: img;
+    width: 140px;
+    margin-left: 30px;
+}
+
+img#logo{
+    width: 140px;
+}
+
+.opcoes{
+    grid-area: opcoes;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+    gap: 25px;
+    border-bottom: 3px solid var(--azul);
+    height: 60px;
+}
+
+.sign{
+    grid-area: sign;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    padding-top: 30px;    
+    margin-right: 15px;
+    gap: 15px;
+    border-bottom: 3px solid var(--azul);
+    height: 60px;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+.imagens{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    align-items: center;
+
+}
+
+img#pEsquerda{
+    height: 300px;
+}
+
+img#pDireita{
+    height: 300px;
+}
+
+img#promocao{
+    width: 400px;
+}
+
+header button{
+    color: white;
+    font-family: var(--fonte-principal);
+    transition: 0.5s;
+}
+
+.navbar button{
+    background-color: var(--verde-medio);
+    height: 40px;
+    width: 100px; 
+    border: 3px solid var(--verde-claro);
+    border-top: none;
+    border-radius: 15px;   
+}
+
+.navbar button:hover{
+    background-color: #008037;
+    height: 45px;
+}
+
+.descricao button{
+    background-color: var(--azul);
+    height: 40px;
+    width: 180px; 
+    border: 3px solid var(--verde-claro);
+    border-top: none;
+    border-radius: 15px;
+    font-size: larger; 
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+.descricao button:hover{
+    background-color: var(--azul);
+    height: 45px;
+}
+
+/** ----------------ESTILO MAIN---------------- **/
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: justify;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.box{
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+}
+
+.box h3{
+    border-bottom: 2px solid white;
+    padding: 3px;
+}
+
+#box1{
+    background-color: #aa934d;
+}
+
+#box2{
+    background-color: var(--verde-claro);
+}
+
+#box3{
+    background-color: var(--azul);
+}
+
+.pesquisar{
+    background-color: var(--bege-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid white;
+}
+
+.pesquisar input{
+    width: 500px;
+    height: 40px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    background-color: var(--verde-escuro);
+    border: 3px solid var(--verde-claro);
+    border-top: none;
+    border-radius: 15px;
+    color: white;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--fonte-principal);
+}
+
+.pesquisar input::placeholder{
+    color: white;
+    font-family: var(--fonte-principal);
+}
+
+.pesquisar button{
+    background: none;
+    border: none;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.pesquisar button img{
+    height: 40px;
+    transition: 0.5s;
+}
+
+.pesquisar button img:hover{
+    height: 37px;
+    width: 37px;
+}
+
+.corpo{
+    background-image: radial-gradient( circle 341px at 50.1% 49.4%,  rgba(214,255,214,1) 52.2%, rgba(161,233,169,1) 100.2% );
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.corpo h1{
+    text-align: center;
+    color: var(--verde-medio);
+}
+
+.corpo img#linha{
+    width: 700px;
+}
+
+.produtos{
+    display: grid;
+    grid-template-areas: 
+    'produto1 produto2'
+    'produto3 produto4';
+    gap: 25px;
+}
+
+#produto1, #produto3{
+    margin-left: 15px;
+}
+
+#produto2, #produto4{
+    margin-right: 15px;
+}
+
+.produto{
+    display: flex;
+    gap: 10px;
+    height: 200px;
+    border-radius: 20px;
+    padding-left: 15px;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.produto img{
+    height: 170px;
+    border: 3px solid var(--verde-escuro);
+    border-radius: 20px;
+}
+
+.dProduto{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dProduto h1{
+    color: var(--azul);
+    border-bottom: 2px solid var(--azul);
+    width: 300px;
+    padding: 3px;
+    text-align: center;
+}
+
+.dProduto button{
+        color: white;
+        font-family: var(--fonte-principal);
+        transition: 0.5s;
+        background-color: var(--verde-medio);
+        height: 40px;
+        width: 100px; 
+        border: 3px solid var(--verde-claro);
+        border-top: none;
+        border-radius: 15px;   
+}
+    
+.dProduto button:hover{
+        background-color: #008037;
+        height: 45px;
+}
+
+footer{
+    color: var(--verde-escuro);
+    text-align: center;
+    margin-top: 30px;
+}
