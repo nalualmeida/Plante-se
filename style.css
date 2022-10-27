@@ -141,6 +141,7 @@ header button{
     padding-left: 40px;
     padding-right: 40px;
     color: white;
+    text-align: left;
 }
 
 .box h3{
